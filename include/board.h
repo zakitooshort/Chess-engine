@@ -25,10 +25,9 @@ class Board {
 public:
     Board();
     void printBoard() const;
-    // Add more functions as needed
 
 private:
     std::array<Piece, 64> board;
 };
 
-#endif //CHESS_ENGINE_BOARD_H
+#endif 

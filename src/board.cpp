@@ -1,18 +1,15 @@
 #include "board.h"
 
 Board::Board() {
-    // Initialize the board with starting positions
     for (int i = 0; i < 64; ++i) {
         board[i] = Piece::None;
     }
 
-    // Place pawns
     for (int i = 0; i < 8; ++i) {
         board[i + 8] = Piece::WhitePawn;
         board[i + 48] = Piece::BlackPawn;
     }
 
-    // Place other pieces
     board[0] = board[7] = Piece::WhiteRook;
     board[1] = board[6] = Piece::WhiteKnight;
     board[2] = board[5] = Piece::WhiteBishop;

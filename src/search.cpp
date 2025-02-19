@@ -4,7 +4,6 @@
 #include "move_generator.h"
 
 Move Search::search(const Board& board, int depth) {
-    // Implement search logic here
     return Move();
 }
 
@@ -15,8 +14,7 @@ int Search::minimax(const Board& board, int depth, int alpha, int beta, bool isM
     if (isMaximizing) {
         int maxEval = -INFINITY;
         for (const auto& move : moves) {
-            Board newBoard = board; // Make a copy of the board
-            // Apply move to newBoard
+            Board newBoard = board; 
             int eval = minimax(newBoard, depth - 1, alpha, beta, false);
             maxEval = std::max(maxEval, eval);
             alpha = std::max(alpha, eval);
@@ -26,8 +24,7 @@ int Search::minimax(const Board& board, int depth, int alpha, int beta, bool isM
     } else {
         int minEval = INFINITY;
         for (const auto& move : moves) {
-            Board newBoard = board; // Make a copy of the board
-            // Apply move to newBoard
+            Board newBoard = board; 
             int eval = minimax(newBoard, depth - 1, alpha, beta, true);
             minEval = std::min(minEval, eval);
             beta = std::min(beta, eval);

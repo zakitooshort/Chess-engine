@@ -6,7 +6,6 @@ int main() {
     Board board;
     board.printBoard();
 
-    // Example: Generate moves and search
     auto moves = MoveGenerator::generateMoves(board);
     Move bestMove = Search::search(board, 3);
 

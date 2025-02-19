@@ -6,7 +6,7 @@
 class Evaluation {
 public:
     static int evaluate(const Board& board);
-    // Add more functions as needed
+    
 };
 
-#endif //CHESS_ENGINE_EVALUATION_H
+#endif 
